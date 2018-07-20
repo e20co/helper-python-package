@@ -1,4 +1,8 @@
-FROM e20co/base-python:bionic
+FROM ubuntu:bionic
+
+RUN apt-get update
+RUN apt-get dist-upgrade -y
+RUN apt-get install -y python3 python3-pip
 
 RUN pip3 install --upgrade pip
 
