@@ -10,6 +10,6 @@ setup(
         'Development Status :: 5 - Alpha'
     ],
     keywords='helper, type checking, retry',
-    package_dir={'': 'helper'},
-    packages=find_packages('helper')
+    package_dir={'': 'helper_python'},
+    packages=find_packages(exclude=["tests"])
 )
