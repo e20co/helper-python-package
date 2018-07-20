@@ -1,5 +1,5 @@
 from unittest.mock import patch
-from helper.retry.retry import retry
+from helper.retry import retry
 import logging
 from unittest import TestCase
 from datetime import datetime

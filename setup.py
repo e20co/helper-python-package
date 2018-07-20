@@ -2,11 +2,11 @@ from setuptools import setup, find_packages
 
 setup(
     name='helper',
-    version='0.1.3',
+    version='0.9.0',
 
     description='Helper Python',
     classifiers=[
-        'Development Status :: 3 - Alpha'
+        'Development Status :: 4 - Beta'
     ],
     keywords='helper, type checking, retry',
     package_dir={'': 'helper_python'},

@@ -1,6 +1,6 @@
 from unittest import TestCase
-from helper.type_checking.type_checking import check_value
-from helper.type_checking.type_checking import check_string
+from helper.type_checking import check_value
+from helper.type_checking import check_string
 
 
 class TestTypeChecking(TestCase):
