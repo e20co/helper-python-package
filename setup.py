@@ -5,11 +5,11 @@ setup(
 
     version='0.1',
 
-    description='Configuration Manager',
+    description='Helper Python',
     classifiers=[
         'Development Status :: 5 - Alpha'
     ],
     keywords='helper, type checking, retry',
-    package_dir={'': 'helper_python'},
+    package_dir={'': 'helper'},
     packages=find_packages('helper')
 )
