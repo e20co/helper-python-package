@@ -1,0 +1,8 @@
+version: '2'
+
+services:
+  package:
+    build: .
+    container_name: helper_python
+    volumes:
+      - ./helper_python:/run/helper_python/

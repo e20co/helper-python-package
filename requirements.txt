@@ -1,0 +1,5 @@
+pytest
+pycodestyle
+coverage
+mypy
+pytest-logger
