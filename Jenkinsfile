@@ -11,7 +11,6 @@ pipeline {
       steps {
         sh 'pwd'
         sh 'ls'
-        pwd()
       }
     }
     stage('Tests') {
@@ -26,7 +25,8 @@ pipeline {
         sh 'ls'
       }
     }
-    stage('') {
+    stage('Local') {
+      agent any
       steps {
         sh 'pwd'
         sh 'ls'
