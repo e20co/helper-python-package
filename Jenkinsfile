@@ -13,5 +13,16 @@ pipeline {
         sh 'ls'
       }
     }
+    stage('Tests') {
+      agent {
+        docker {
+          image '11c089ccc057eed56162f36d8dc89fff4895861f:latest'
+        }
+
+      }
+      steps {
+        sh 'pwd'
+      }
+    }
   }
 }
