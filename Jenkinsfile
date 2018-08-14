@@ -9,10 +9,7 @@ pipeline {
 
       }
       steps {
-        sh 'pwd'
-        sh 'ls'
-        echo '"hello"'
-        sh 'cd /run/helper_python/'
+        echo 'Build Finished'
       }
     }
     stage('Tests') {
@@ -24,14 +21,10 @@ pipeline {
       }
       environment {
         PYTHONPATH = '/run/helper_python/'
+        PROJECT_PATH = '/run/helper_python/'
       }
       steps {
-        sh 'pwd'
-        sh 'ls'
-        sh 'cd /run/helper_python/; ls'
-        sh '/run/helper_python/code_style.sh'
-        sh 'apt-get install python3'
-        sh 'env'
+        sh 'cd "$PROJECT_PATH" && ./code_style.sh'
         sh 'cd /run/helper_python/; ./test.sh'
       }
     }
