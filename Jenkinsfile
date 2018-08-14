@@ -27,7 +27,7 @@ pipeline {
         sh '"$PROJECT_PATH/test.sh"'
         sh '"$PROJECT_PATH/code_style.sh"'
         sh '"$PROJECT_PATH/coverage.sh"'
-        sh 'cd "$PROJECT_PATH/" && ls; mypy helper/'
+        sh 'cd "$PROJECT_PATH/" && ./static_check.sh'
       }
     }
   }
