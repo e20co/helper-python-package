@@ -26,8 +26,8 @@ pipeline {
       steps {
         sh '"$PROJECT_PATH/test.sh"'
         sh '"$PROJECT_PATH/code_style.sh"'
-        sh 'cd "$PROJECT_PATH/static_check.sh"'
         sh '"$PROJECT_PATH/coverage.sh"'
+        sh 'cd "$PROJECT_PATH/" && ls'
       }
     }
     stage('Local') {
