@@ -5,6 +5,7 @@ pipeline {
       agent {
         dockerfile {
           filename 'Dockerfile'
+          additionalBuildArgs  '--tag helper_python_package'
         }
 
       }
@@ -15,7 +16,7 @@ pipeline {
     stage('Test') {
       agent {
         docker {
-          image '11c089ccc057eed56162f36d8dc89fff4895861f:latest'
+          image 'helper_python_package:latest'
         }
 
       }
