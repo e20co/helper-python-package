@@ -26,6 +26,7 @@ pipeline {
         sh 'pwd'
         sh 'ls'
         sh 'cd /run/helper_python/'
+        sh './test.sh'
       }
     }
     stage('Local') {
