@@ -21,11 +21,13 @@ pipeline {
       }
       environment {
         PYTHONPATH = '/run/helper_python/'
-        PROJECT_PATH = '/run/helper_python/'
+        PROJECT_PATH = '/run/helper_python'
       }
       steps {
-        sh 'cd "$PROJECT_PATH" && ./code_style.sh'
-        sh 'cd /run/helper_python/; ./test.sh'
+        sh '"$PROJECT_PATH/test.sh"'
+        sh '"$PROJECT_PATH/code_style.sh"'
+        sh 'cd "$PROJECT_PATH/static_check.sh"'
+        sh '"$PROJECT_PATH/coverage.sh"'
       }
     }
     stage('Local') {
