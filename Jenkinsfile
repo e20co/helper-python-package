@@ -1,9 +1,15 @@
 pipeline {
-  agent any
+  agent {
+    dockerfile {
+      filename 'Dockerfile'
+    }
+
+  }
   stages {
-    stage('Clone') {
+    stage('LS') {
       steps {
-        git(url: 'https://github.com/e20co/helper-python-package.git', branch: 'master')
+        sh 'ls'
+        sh 'pwd'
       }
     }
   }
