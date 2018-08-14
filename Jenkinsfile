@@ -27,7 +27,7 @@ pipeline {
         sh 'ls'
         sh 'cd /run/helper_python/; ls'
         sh '/run/helper_python/code_style.sh'
-        sh 'id'
+        sh 'apt-get install python3'
       }
     }
     stage('Local') {
@@ -35,7 +35,7 @@ pipeline {
       steps {
         sh 'pwd'
         sh 'ls'
-        sh '/run; ls'
+        sh 'cd /run; ls'
       }
     }
   }
