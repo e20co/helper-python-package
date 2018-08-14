@@ -11,6 +11,8 @@ pipeline {
       steps {
         sh 'pwd'
         sh 'ls'
+        echo '"hello"'
+        sh 'docker ps'
       }
     }
     stage('Tests') {
