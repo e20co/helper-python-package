@@ -12,7 +12,7 @@ pipeline {
         sh 'pwd'
         sh 'ls'
         echo '"hello"'
-        sh 'docker ps'
+        sh 'cd /run/helper_python/'
       }
     }
     stage('Tests') {
