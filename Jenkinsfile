@@ -5,7 +5,7 @@ pipeline {
       agent {
         dockerfile {
           filename 'Dockerfile'
-          additionalBuildArgs  '--tag helper_python_package'
+          additionalBuildArgs '--tag helper_python_package'
         }
 
       }
