@@ -11,6 +11,7 @@ pipeline {
       steps {
         sh 'pwd'
         sh 'ls'
+        pwd()
       }
     }
     stage('Tests') {
