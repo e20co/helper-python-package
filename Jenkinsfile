@@ -27,6 +27,8 @@ pipeline {
         sh 'ls'
         sh 'cd /run/helper_python/; ls'
         sh '/run/helper_python/code_style.sh'
+        sh '''/run/helper_python/static_check.sh
+'''
       }
     }
     stage('Local') {
@@ -34,6 +36,7 @@ pipeline {
       steps {
         sh 'pwd'
         sh 'ls'
+        sh '/run; ls'
       }
     }
   }
