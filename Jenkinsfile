@@ -25,8 +25,8 @@ pipeline {
       steps {
         sh 'pwd'
         sh 'ls'
-        sh 'cd /run/helper_python/'
-        sh './test.sh'
+        sh 'cd /run/helper_python/; ls'
+        sh '/run/helper_python/test.sh'
       }
     }
     stage('Local') {
