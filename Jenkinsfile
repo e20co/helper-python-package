@@ -1,16 +1,16 @@
 pipeline {
-  agent {
-    dockerfile {
-      filename 'Dockerfile'
-    }
-
-  }
-  stages {
-    stage('LS') {
-      steps {
-        sh 'ls'
-        sh 'pwd'
-      }
-    }
-  }
+   agent none
+   stages {
+       stage('Build') {
+         agent {    
+              dockerfile {
+                 filename 'Dockerfile'
+              }
+         }
+           steps {
+               sh 'pwd'
+               sh 'ls'
+           }
+       }
+   }
 }
