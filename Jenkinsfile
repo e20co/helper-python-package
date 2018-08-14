@@ -22,6 +22,9 @@ pipeline {
         }
 
       }
+      environment {
+        PYTHONPATH = '/run/helper_python/'
+      }
       steps {
         sh 'pwd'
         sh 'ls'
@@ -29,6 +32,7 @@ pipeline {
         sh '/run/helper_python/code_style.sh'
         sh 'apt-get install python3'
         sh 'env'
+        sh 'cd /run/helper_python/; ./test.sh'
       }
     }
     stage('Local') {
@@ -37,7 +41,6 @@ pipeline {
         sh 'pwd'
         sh 'ls'
         sh 'cd /run; ls'
-        sh 'apt-get install python3'
       }
     }
   }
